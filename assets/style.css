@@ -1,6 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -16,254 +16,152 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 /* 
 *
 * End of CSS RESET
 *
 */
-body {
-    font-size: 5vh;
+* {
+    font-family: 'Inconsolata', monospace;
 }
 
-/* GRID mobile layouts and sections*/
+body {
+    font-size: 3vh;
+    background-color: lightgray;
+}
+
 #wrapper {
     display: grid;
-    grid-template-areas: 
-    "mainhead"
-    "main"
-    "one"
-    "two"
-    "footer";
-    height: 100vh;  
+    grid-template-columns: repeat(auto, 6);
+    grid-template-rows: repeat(auto, 7);
+    grid-template-areas:
+    "mainhead first first first first first"
+    "mainhead second second second second second"
+    "mainhead main main main main main"
+    "one main main main main main"
+    "one main main main main main"
+    "two main main main main main"
+    "footer footer footer footer footer footer";
+    height: 100vh;
 }
 
 #mainhead {
     display: grid;
     grid-area: mainhead;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     grid-template-areas:
-    "mainnav"
-    "headerone";
+    "headerone"
+    "headfoot";
+    margin: 0;
+    padding: 0;
+    border: 0.5vh solid #343A40;
 }
 
 #headerone {
     grid-area: headerone;
-    /* background-color: aqua; */
+    text-align: center;
 }
 
 #headfoot{
-    grid-area: mainnav;
-    /* background-color: aqua; */
+    grid-area: headfoot;
+    text-align: center;
 }
 
+#haringibonlogo,
+h1.display-5 {
+    position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    font-family: 'Lobster', cursive;
+}
+
+/* Navigation Section */
+    
 #first {
     grid-area: first;
     /* background-color: blanchedalmond; */
-    display: none;
+    display: block;
+    background-color: black;
+    position: sticky;
+        top: 0;
+    display: grid;
 }
 
 #second {
     grid-area: second;
     /* background-color: bisque; */
-    display: none;
+    display: block;
 }
+nav#second ul li a {
+    color: #7F4B2E;
+}
+
+
 main {
     grid-area: main;
-    /* background-color: skyblue; */
+    padding: 5%;
 }
 #one {
     grid-area: one;
-    /* background-color: blanchedalmond; */
+    border: 0.5vh solid #343A40;
+    padding: 5%;
+}
+
+#one p,
+#two li {
+    font-family: 'Inconsolata', monospace;
 }
 
 #two {
     grid-area: two;
-    /* background-color: bisque; */
+    border: 0.5vh solid #343A40;
+    padding: 5%;
 }
+
+#two h2 {
+    text-align: center;
+}
+
 footer {
     grid-area: footer;
-    /* background-color: teal; */
+    background-color: #343A40;
+    color: white;
+    text-align: right;
 }
 
-/* Grid Desktop */
-@media screen and (min-width:730px) {
-    /* http://meyerweb.com/eric/tools/css/reset/ 
-    v2.0 | 20110126
-    License: none (public domain)
-    */
-
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed, 
-    figure, figcaption, footer, header, hgroup, 
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-    }
-    /* HTML5 display-role reset for older browsers */
-    article, aside, details, figcaption, figure, 
-    footer, header, hgroup, menu, nav, section {
-        display: block;
-    }
-    body {
-        line-height: 1;
-    }
-    ol, ul {
-        list-style: none;
-    }
-    blockquote, q {
-        quotes: none;
-    }
-    blockquote:before, blockquote:after,
-    q:before, q:after {
-        content: '';
-        content: none;
-    }
-    table {
-        border-collapse: collapse;
-        border-spacing: 0;
-    }
-    /* 
-    *
-    * End of CSS RESET
-    *
-    */
-
-    body {
-        font-size: 3vh;
-        background-color: lightgray;
-    }
-
-    #wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto, 6);
-        grid-template-rows: repeat(auto, 7);
-        grid-template-areas:
-        "mainhead first first first first first"
-        "mainhead second second second second second"
-        "mainhead main main main main main"
-        "one main main main main main"
-        "one main main main main main"
-        "two main main main main main"
-        "footer footer footer footer footer footer";
-        height: 100vh;
-    }
-
-    #mainhead {
-        display: grid;
-        grid-area: mainhead;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-        "headerone"
-        "headfoot";
-        margin: 0;
-        padding: 0;
-        border: 2vh solid #343A40;
-    }
-
-    #headerone {
-        grid-area: headerone;
-        text-align: center;
-    }
-    
-    #headfoot{
-        grid-area: headfoot;
-        text-align: center;
-    }
-
-    /* Navigation Section */
-     
-    #first {
-        grid-area: first;
-        /* background-color: blanchedalmond; */
-        display: block;
-        background-color: black;
-        position: sticky;
-            top: 0;
-        display: grid;
-    }
-
-    ul#navifirst,
-    ul#navifirst li,
-    ul#navisecond li,
-    section#searchbar {
-        display: inline-block;
-    }
-
-    ul#navifirst li a,
-    ul#navisecond li a,
-    section#searchbar label,
-    section#searchbar input {
-        text-decoration: none;
-        font-size: 0.8em;
-    }
-
-    section#searchbar {
-        float: right;
-    }
-    
-    #second {
-        grid-area: second;
-        /* background-color: bisque; */
-        display: block;
-    }
-    main {
-        grid-area: main;
-        /* background-color: skyblue; */
-    }
-    #one {
-        grid-area: one;
-        /* background-color: blanchedalmond; */
-    }
-    
-    #two {
-        grid-area: two;
-        /* background-color: bisque; */
-    }
-    footer {
-        grid-area: footer;
-        /* background-color: teal; */
-    }
+footer p {
+    position: relative;
+        top: 50%;
+        transform: translateY(-50%);
 }

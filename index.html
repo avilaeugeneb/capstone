@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome Icons -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Lobster" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <!-- External Stylesheet -->
     <link rel="stylesheet" href="assets/style.css">
 
@@ -20,13 +24,13 @@
 
         <header id="mainhead">
             <header id="headerone">
-                <img src="assets/img/haribon_logo.png" class="img-fluid" alt="Haring Ibon UPLB Logo">
+                <img src="assets/img/haribon_logo.png" class="img-fluid" alt="Haring Ibon UPLB Logo" id="haringibonlogo">
             </header> <!-- /#headerone -->
             <footer id="headfoot">   
                 <h1 class="display-5">Haring Ibon UPLB</h1>
             </footer> <!-- /#mainnav -->
         </header> <!-- /#mainhead -->
-        <nav id="first" class="navi">
+        <nav id="first">
             <nav class="navbar navbar-dark bg-dark">
                 <a class="navbar-brand" href="#"><i class="fas fa-globe"></i> Haring Ibon</a>
                 <form class="form-inline">
@@ -39,14 +43,20 @@
                 </form>
             </nav>
         </nav> <!-- /#first -->
-        <nav id="second" class="navi">
-            <ul id="navisecond">
-                <li><a href="#">Current</a></li>
-                <li><a href="#">Section 2</a></li>
-                <li><a href="#">Section 3</a></li>
-                <li><a href="#">Section 4</a></li>
-                <li><a href="#">Section 5</a></li>
-                <li><a href="#">Section 6</a></li>
+        <nav id="second">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Main Section</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Section one</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Section two</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Last Section</a>
+                </li>
             </ul>
         </nav> <!-- /#second -->
         <main id="content">
@@ -58,13 +68,20 @@
 
         </main> <!-- /main#content -->
         <aside id="one">
-            <h2>aside one</h2>
+            <p>The HARING IBON UPLB or simply HARING IBON, a student organization in the University of the Philippines Los Baños with org record ID 190, is recognized as of Second Semester, AY 2017-2018.</p>
         </aside> <!-- /#oneaside --> 
         <aside id="two">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis nisi pariatur obcaecati nemo aspernatur tenetur expedita, ipsa harum at eaque corporis dolores placeat non animi velit quasi. Possimus, sequi voluptatum.</p>
+            <h2 class="alert alert-dark" role="alert">Activities</h2>
+            <ul id="activity">
+                <li>Talas at Dagitan 2018: A General Information Quiz Contest </li>
+                <li>Punla 2018: A Seminar on Science, Technology, and Innovation for Sustainable Development </li>
+                <li>Paberdehan 2017: Soil and Water Conservation "Bare the Mind of the Berde Mind"</li>
+                <li>Punla 2017</li>
+                <li>Telontian 2017</li>
+            </ul>
         </aside> <!-- /#twoaside -->
         <footer>
-            <p>Eugene Avila &copy; 2018. No copyright infringement intended. All contents are for educational purposes only.</p>
+            <p>Haring Ibon UPLB &copy; 2018. No copyright infringement intended. All contents are for educational purposes only.</p>
         </footer> <!-- /#footer -->
 
     </div>
