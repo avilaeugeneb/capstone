@@ -51,7 +51,6 @@ table {
 * End of CSS RESET
 *
 */
-
 body {
     font-size: 5vh;
 }
@@ -72,97 +71,158 @@ body {
     display: grid;
     grid-area: mainhead;
     grid-template-areas:
-    "headerone"
-    "mainnav";
-    background-color: aquamarine;
-    padding: 10px;
-    border-radius: 10px;
+    "mainnav"
+    "headerone";
 }
 
 #headerone {
-    padding: 1vh;
-    margin: 1vh 1vh 0 1vh;
     grid-area: headerone;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
-#mainnav{
-    padding: 1vh;
-    margin: 0 1vh 1vh 1vh;
+#headfoot{
     grid-area: mainnav;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 #first {
     grid-area: first;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
     display: none;
 }
 
 #second {
     grid-area: second;
-    background-color: bisque;
+    /* background-color: bisque; */
     display: none;
 }
 main {
     grid-area: main;
-    background-color: skyblue;
+    /* background-color: skyblue; */
 }
 #one {
     grid-area: one;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
 }
 
 #two {
     grid-area: two;
-    background-color: bisque;
+    /* background-color: bisque; */
 }
 footer {
     grid-area: footer;
-    background-color: teal;
+    /* background-color: teal; */
 }
 
 /* Grid Desktop */
 @media screen and (min-width:730px) {
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /* 
+    *
+    * End of CSS RESET
+    *
+    */
+
     body {
         font-size: 3vh;
+        background-color: lightgray;
     }
 
     #wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 2fr 2fr 4fr 4fr 1fr;
-        grid-template-areas: 
-        "mainhead mainhead first first first first"
-        "mainhead mainhead second second second second"
-        "mainhead mainhead main main main main"
-        "one one main main main main"
-        "one one main main main main"
-        "two two main main main main"
+        grid-template-columns: repeat(auto, 6);
+        grid-template-rows: repeat(auto, 7);
+        grid-template-areas:
+        "mainhead first first first first first"
+        "mainhead second second second second second"
+        "mainhead main main main main main"
+        "one main main main main main"
+        "one main main main main main"
+        "two main main main main main"
         "footer footer footer footer footer footer";
-        height: 100vh;  
+        height: 100vh;
+    }
+
+    #mainhead {
+        display: grid;
+        grid-area: mainhead;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "headerone"
+        "headfoot";
+        margin: 0;
+        padding: 0;
+        border: 2vh solid #343A40;
     }
 
     #headerone {
-        padding: 1vh;
-        margin: 1vh 1vh 0 1vh;
         grid-area: headerone;
-        background-color: aqua;
+        text-align: center;
     }
     
-    #mainnav{
-        padding: 1vh;
-        margin: 0 1vh 1vh 1vh;
-        grid-area: mainnav;
-        background-color: aqua;
+    #headfoot{
+        grid-area: headfoot;
+        text-align: center;
     }
 
     /* Navigation Section */
      
     #first {
         grid-area: first;
-        background-color: blanchedalmond;
+        /* background-color: blanchedalmond; */
         display: block;
+        background-color: black;
+        position: sticky;
+            top: 0;
+        display: grid;
     }
 
     ul#navifirst,
@@ -186,24 +246,24 @@ footer {
     
     #second {
         grid-area: second;
-        background-color: bisque;
+        /* background-color: bisque; */
         display: block;
     }
     main {
         grid-area: main;
-        background-color: skyblue;
+        /* background-color: skyblue; */
     }
     #one {
         grid-area: one;
-        background-color: blanchedalmond;
+        /* background-color: blanchedalmond; */
     }
     
     #two {
         grid-area: two;
-        background-color: bisque;
+        /* background-color: bisque; */
     }
     footer {
         grid-area: footer;
-        background-color: teal;
+        /* background-color: teal; */
     }
 }
